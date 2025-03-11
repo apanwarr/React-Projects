@@ -27,12 +27,21 @@ const anotherElement = (
 
 const anotherUser = " chai aur sip.."
 
-const reactElement = React.createElement(  {/* comment---  createElement() by default automatically inject hojata hai aur usse inject karta hai 'Babel'   and ye element 4 cheeze maagta hai -> i) Type ii) keys iii) refs iv) props ---  */},
+/* React.createElement() is automatically transformed by Babel. 
+   It requires 4 things: 
+   1) Type 
+   2) Props 
+   3) Keys (if applicable)
+   4) Children (including evaluated expressions) 
+*/
+const reactElement = React.createElement(    
     'a', 
     {href: 'https://google.com',target: '_blank' },
     'click me to visit google',
-    anotherUser              ,{/* ---  Evalauted expressions  ---  */}
-)
+    anotherUser  
+)          
+// /* Comments ---  Evalauted expressions  ---  */
+
 
 ReactDOM.createRoot(document.getElementById('root')).
 render(
